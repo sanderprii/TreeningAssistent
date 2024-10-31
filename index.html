@@ -14,7 +14,7 @@
     <!-- Peamenüü -->
     <div id="main-menu">
         <button id="register-btn" aria-label="Loo kasutaja">Loo kasutaja</button>
-
+        <button id="login-btn" aria-label="Logi sisse">Logi sisse</button>
     </div>
 
     <!-- Autentimise vorm -->
@@ -25,8 +25,38 @@
             <input type="password" id="password" placeholder="Parool" required>
             <button type="submit" id="submit-btn"></button>
         </form>
-
+        <button id="to-login-btn" style="display: none;">Logi sisse</button>
         <button id="to-register-btn" style="display: none;">Loo kasutaja</button>
+    </div>
+
+
+
+    <!-- Pärast sisselogimist kuvatav juhtpaneel -->
+    <div id="dashboard" style="display: none;">
+        <h2>Tere, <span id="user-name"></span>!</h2>
+
+        <!-- Ristkülikud -->
+        <div class="rectangle" id="workout-page">Sisesta ja Otsi treeninguid</div>
+        <div class="rectangle" id="timeline-page">Treeningute ajajoon</div>
+        <div class="rectangle" id="ai-suggestions-page">Tehisintellekti soovitused</div>
+        <div class="rectangle" id="profile-page">Minu profiil</div>
+
+        <button id="logout-btn">Logi välja</button>
+    </div>
+
+    <!-- "Minu profiil" leht -->
+    <div id="profile-container" style="display: none;">
+        <button class="back-btn">Tagasi</button>
+        <h2>Minu profiil</h2>
+        <img id="profile-picture" src="default-profile.png" alt="Profiilipilt" width="150" height="150">
+
+        <button id="add-profile-picture-btn" style="display: block;">Lisa profiili pilt</button>
+
+        <form id="profile-picture-form" style="display: none;">
+            <input type="file" name="profilePicture" accept="image/*">
+            <button type="submit">Salvesta</button>
+        </form>
+        <button id="change-profile-picture-btn" style="display: none;">Muuda profiilipilti</button>
     </div>
 
 </main>
